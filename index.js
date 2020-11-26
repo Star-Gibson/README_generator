@@ -47,7 +47,7 @@ console.log(questions) // Check for Questions - Take out upon completion
 
 // function to write README file
 function writeToFile(fileName , data) {
-
+    
 }
 
 
@@ -56,11 +56,10 @@ function init() {
    inquirer.prompt(questions).then(data => 
     {
         const fileName = `${data.title.toLowerCase().split('').join('')}.md`;
-
-         fs.writeFile(fileName, JSON.stringify(data, null, '\t') , (err) =>
+            
+            fs.writeFile(fileName, JSON.stringify(data, null, '\t') , (err) =>
          err ? console.log(err) : console.log('Success!')
          )
-
      }
    )}
 
