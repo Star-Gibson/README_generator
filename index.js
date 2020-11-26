@@ -67,10 +67,8 @@ function writeToFile(fileName , data) {
 // function to initialize program - Need to figure out how to link github information from terminal input.
 function init() {
    inquirer.prompt(questions).then(data => 
-    {
-        
-        let genMD = generateMarkdown(data);
-        
+    {    
+        let genMD = generateMarkdown(data);   
         writeToFile('README.md', genMD); //`'${data.title}.md'` - Can use if input is title otherwise name README.md
      }
    )}

@@ -31,7 +31,8 @@ function generateMarkdown(data) {
 
   ## Questions
   Github: https://github.com/${data.userName}
-  Please feel free to reach out to ${data.email}, if you have any questions about my application!
+  
+  Please feel free to reach out to me at ${data.email}, if you have any questions about my application!
 
 `;
 }
