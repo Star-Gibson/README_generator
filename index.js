@@ -1,6 +1,8 @@
-//Requiring inquirer and file system
-const inquirer = require('inquirer'); 
+//Checking the markdown script
+generateMarkdown = require('./utils/generateMarkdown.js')
 
+//Requiring Dependencies inquirer and file system
+const inquirer = require('inquirer'); 
 const fs = require('fs');
 
 
@@ -47,7 +49,12 @@ console.log(questions) // Check for Questions - Take out upon completion
 
 // function to write README file
 function writeToFile(fileName , data) {
-    
+    fs.writeFile(fileName, data, function (err) {
+        if (err){
+            return console.log(err);
+        }
+            console.log("Success!");
+    })
 }
 
 
@@ -55,11 +62,11 @@ function writeToFile(fileName , data) {
 function init() {
    inquirer.prompt(questions).then(data => 
     {
-        const fileName = `${data.title.toLowerCase().split('').join('')}.md`;
-            
-            fs.writeFile(fileName, JSON.stringify(data, null, '\t') , (err) =>
-         err ? console.log(err) : console.log('Success!')
-         )
+
+
+
+        
+        writeToFile('README.md', JSON.stringify(data))
      }
    )}
 
