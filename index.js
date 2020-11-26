@@ -39,9 +39,10 @@ const questions = [
         name: 'test',
     },
    
-    {   type: 'confirm',
-        message: 'Were there any outside contributions or collaborators to your application?',
+    {   type: 'input',
+        message: 'Who contributed to the development of this application?',
         name: 'credits',
+        default: 'Sole Contributor/Names of Group Members'
 
     },
     {   type: 'list',
