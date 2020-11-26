@@ -7,6 +7,14 @@ const generateMarkdown = require('./utils/generateMarkdown.js');
 // array of questions for user
 const questions = [ 
     {   type: 'input',
+        message: 'What is your github username?',
+        name: 'userName',
+    },
+    {   type: 'input',
+        message: 'What is your email address?',
+        name: 'email',
+    },
+    {   type: 'input',
         message: 'What is the name of your application?',
         name: 'title',
     },
@@ -36,7 +44,7 @@ const questions = [
         name: 'credits',
 
     },
-    {   type: 'checkbox',
+    {   type: 'list',
         message: 'Which license would you like to include on your readme?',
         name: 'license',
         choices: ['MIT', 'Apache License 2.0', 'Boost Software', 'GNU AGPLv3']

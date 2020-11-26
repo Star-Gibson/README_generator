@@ -12,6 +12,7 @@ function generateMarkdown(data) {
   * [Test](#test)
   * [Credits](#credits)
   * [License](#license)
+  * [Questions](#questions)
      
   ## Installation
   ${data.installation}
@@ -27,6 +28,11 @@ function generateMarkdown(data) {
 
   ## License
   ${data.license}
+
+  ## Questions
+  Github: https://github.com/${data.userName}
+  Please feel free to reach out to ${data.email}, if you have any questions about my application!
+
 `;
 }
 
