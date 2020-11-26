@@ -18,6 +18,9 @@ function generateMarkdown(data) {
   ## Usage
   ${data.usage}
 
+  ## Test
+  ${data.test}
+
   ## Credits
   ${data.credits}
 

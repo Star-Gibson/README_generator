@@ -21,8 +21,13 @@ const questions = [
     },
    
     {   type: 'input',
-        message: 'Provide instructions and examples of use of your application.',
+        message: 'Provide instructions on how to use your application.',
         name: 'usage',
+    },
+
+    {   type: 'input',
+    message: 'Provide an example on how to test your application.',
+    name: 'test',
     },
    
     {   type: 'confirm',
