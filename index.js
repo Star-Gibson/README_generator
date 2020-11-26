@@ -36,11 +36,11 @@ const questions = [
         name: 'credits',
 
     },
-    {   type: 'checkbox',
-        message: 'Which license would you like to include on your readme?',
-        name: 'license',
-        choices: ['MIT', 'Apache License 2.0', 'Boost Software', 'GNU AGPLv3']
-    },
+    // {   type: 'checkbox',
+    //     message: 'Which license would you like to include on your readme?',
+    //     name: 'license',
+    //     choices: ['MIT', 'Apache License 2.0', 'Boost Software', 'GNU AGPLv3']
+    // },
    
 ];
 console.log(questions) // Check for Questions - Take out upon completion
