@@ -1,9 +1,7 @@
-//Checking the markdown script
-generateMarkdown = require('./utils/generateMarkdown.js')
-
-//Requiring Dependencies inquirer and file system
+//Requiring Dependencies inquirer, file system, and generateMarkdown
 const inquirer = require('inquirer'); 
 const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
 
 // array of questions for user
@@ -33,16 +31,16 @@ const questions = [
         name: 'test',
     },
    
-    // {   type: 'confirm',
-    //     message: 'Were there any outside contributions or collaborators to your application?',
-    //     name: 'credits',
+    {   type: 'confirm',
+        message: 'Were there any outside contributions or collaborators to your application?',
+        name: 'credits',
 
-    // },
-    // {   type: 'checkbox',
-    //     message: 'Which license would you like to include on your readme?',
-    //     name: 'license',
-    //     choices: ['MIT', 'Apache License 2.0', 'Boost Software', 'GNU AGPLv3']
-    // },
+    },
+    {   type: 'checkbox',
+        message: 'Which license would you like to include on your readme?',
+        name: 'license',
+        choices: ['MIT', 'Apache License 2.0', 'Boost Software', 'GNU AGPLv3']
+    },
    
 ];
 console.log(questions) // Check for Questions - Take out upon completion
@@ -51,22 +49,21 @@ console.log(questions) // Check for Questions - Take out upon completion
 function writeToFile(fileName , data) {
     fs.writeFile(fileName, data, function (err) {
         if (err){
-            return console.log(err);
+            return console.log(err); //Logs error
         }
-            console.log("Success!");
+            console.log("Success!"); //Logs Success
     })
 }
 
 
-// function to initialize program
+// function to initialize program - Need to figure out how to link github information from terminal input.
 function init() {
    inquirer.prompt(questions).then(data => 
     {
-
-
-
         
-        writeToFile('README.md', JSON.stringify(data))
+        let genMD = generateMarkdown(data);
+        
+        writeToFile('README.md', genMD); //`'${data.title}.md'` - Can use if input is title otherwise name README.md
      }
    )}
 
