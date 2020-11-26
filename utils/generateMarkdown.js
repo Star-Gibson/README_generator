@@ -9,7 +9,7 @@ function generateMarkdown(data) {
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
-  * [Test] (#test)
+  * [Test](#test)
   * [Credits](#credits)
   * [License](#license)
      
