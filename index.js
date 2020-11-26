@@ -1,5 +1,6 @@
 //Requiring inquirer and file system
 const inquirer = require('inquirer'); 
+
 const fs = require('fs');
 
 
@@ -26,8 +27,8 @@ const questions = [
     },
 
     {   type: 'input',
-    message: 'Provide an example on how to test your application.',
-    name: 'test',
+        message: 'Provide an example on how to test your application.',
+        name: 'test',
     },
    
     {   type: 'confirm',
@@ -45,12 +46,12 @@ const questions = [
 console.log(questions) // Check for Questions - Take out upon completion
 
 // function to write README file
-function writeToFile(fileName, data) {
+function writeToFile(fileName , data) {
 }
 
 // function to initialize program
 function init() {
-    
+   
 
 }
 
