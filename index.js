@@ -45,11 +45,16 @@ const questions = [
         default: 'Sole Contributor/Names of Group Members'
 
     },
-    {   type: 'list',
-        message: 'Which license would you like to include on your readme?',
+    {   type: 'input',
+        message: 'Which license would you like to include on your README?',
         name: 'license',
-        choices: ['MIT', 'Apache License 2.0', 'Boost Software', 'GNU AGPLv3']
+        default: 'MIT, Apache License 2.0, Boost Software, GNU AGPLv3'
     },
+    {   type: 'list',
+        message: 'What color license would you like to include on your README?',
+        name: 'color',
+        choices: ['green', 'red', 'blue', 'yellow']
+},
    
 ];
 console.log(questions) // Check for Questions - Take out upon completion
