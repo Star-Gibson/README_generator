@@ -57,7 +57,7 @@ const questions = [
 },
    
 ];
-console.log(questions) // Check for Questions - Take out upon completion
+
 
 // function to write README file
 function writeToFile(fileName , data) {
