@@ -8,53 +8,52 @@ const generateMarkdown = require('./utils/generateMarkdown.js');
 const questions = [ 
     {   type: 'input',
         message: 'What is your github username?',
-        name: 'userName',
+        name: 'userName', // data.userName
     },
     {   type: 'input',
         message: 'What is your email address?',
-        name: 'email',
+        name: 'email', // data.email
     },
     {   type: 'input',
         message: 'What is the name of your application?',
-        name: 'title',
+        name: 'title', // data.title
     },
    
     {   type: 'input',
         message: 'How would you describe your application?',
-        name: 'description',
+        name: 'description', // data.description
     },
    
     {   type: 'input',
         message: 'What are the steps required to install your project?',
-        name: 'installation',
+        name: 'installation', // data.installation
     },
    
     {   type: 'input',
         message: 'Provide instructions on how to use your application.',
-        name: 'usage',
+        name: 'usage', // data.usage
     },
 
     {   type: 'input',
         message: 'Provide an example on how to test your application.',
-        name: 'test',
+        name: 'test', // data.test
     },
    
     {   type: 'input',
         message: 'Who contributed to the development of this application?',
-        name: 'credits',
+        name: 'credits', // data.credits
         default: 'Sole Contributor/Names of Group Members'
-
     },
     {   type: 'input',
         message: 'Which license would you like to include on your README?',
-        name: 'license',
-        default: 'MIT, Apache License 2.0, Boost Software, GNU AGPLv3'
+        name: 'license', // data.license
+        default: 'MIT, Apache2.0, GPL, BSD, lglpl_2_1'
     },
     {   type: 'list',
         message: 'What color license would you like to include on your README?',
-        name: 'color',
-        choices: ['green', 'red', 'blue', 'yellow']
-},
+        name: 'color', // data.color
+        choices: ['green', 'red', 'blue', 'yellow'] 
+    },
    
 ];
 
@@ -70,7 +69,7 @@ function writeToFile(fileName , data) {
 }
 
 
-// function to initialize program - Need to figure out how to link github information from terminal input.
+// function to initialize program
 function init() {
    inquirer.prompt(questions).then(data => 
     {    
