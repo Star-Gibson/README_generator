@@ -28,7 +28,7 @@ ${data.test}
 ${data.credits}
 
 ## License
-${data.license}
+This project is licensed under the ${data.license} License.
 
 ## Questions
   * Github: https://github.com/${data.userName}
