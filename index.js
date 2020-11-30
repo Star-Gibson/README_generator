@@ -1,7 +1,7 @@
 //Requiring Dependencies inquirer, file system, and generateMarkdown
 const inquirer = require('inquirer'); 
 const fs = require('fs');
-const generateMarkdown = require('./utils/generateMarkdown.js');
+const generateMarkdown = require('./util/generateMarkdown.js');
 
 
 // array of questions for user
@@ -44,10 +44,10 @@ const questions = [
         name: 'credits', // data.credits
         default: 'Sole Contributor/Names of Group Members'
     },
-    {   type: 'input',
+    {   type: 'list',
         message: 'Which license would you like to include on your README?',
         name: 'license', // data.license
-        default: 'MIT, Apache2.0, GPL, BSD, lglpl_2_1'
+        choices: ["MIT", "Apache2.0","GPL", "BSD", "lglpl_2_1"]
     },
     {   type: 'list',
         message: 'What color license would you like to include on your README?',
